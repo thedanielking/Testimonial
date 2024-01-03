@@ -75,7 +75,7 @@ body{
     background-color: var(--clr-secondary-200);
     padding: 20px;
     box-shadow: 0 10px 20px rgb(71, 71, 71);
-    background-image: url('/images/bg-pattern-quotation.svg');
+    background-image: url('bg-pattern-quotation.svg');
     background-repeat: no-repeat;
     background-position: 80% 0;
     grid-column: span 2; /* this spans together 2columns*/
