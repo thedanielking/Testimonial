@@ -1,0 +1,232 @@
+:root{
+    --clr-primary-100: hsl(0, 0%, 100%);
+    --clr-neutral-200: hsl(0, 0%, 81%);
+    --clr-neutral-100:  hsl(210, 46%, 95%);
+    --clr-neutral-300:  hsl(217, 19%, 35%);
+    --clr-secondary-100: hsl(263, 50%, 66%);
+    --clr-secondary-200: hsl(263, 58%, 55%);
+    --clr-secondary-300: hsl(219, 29%, 14%);
+
+    --fw-regular:500 ;
+    --fw-bold: 600 ;
+
+    --ff-accent: 'Barlow Semi Condensed' sans-serif;
+}
+
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+}
+
+body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6{
+    overflow-wrap: break-word;
+}
+
+h1, h2, h3{
+    line-height: 1;
+}
+
+
+/* general styles */
+body{
+    background-color: var(--clr-neutral-100);
+    margin: 20px;
+    display: flex;
+    font-size: .75rem;
+    font-weight: var(--fw-regular);
+    font-family: var(--ff-accent);
+    min-height: 100vh;
+    justify-content: center;
+    align-content: center;
+    
+}
+
+/* testimonials */
+.testimonials{
+    width: 80%;
+    padding: 5px;
+    margin: auto;
+    display:grid;
+    gap: 20px; 
+    grid-template-columns: repeat(4, 1fr); /*this sets the template for the grid items. the number 4=4 columns and 1fr= 1fraction of the columns. the repeat means it gives 1fr for 4columns hence "repeat(4,1fr)"*/
+
+
+}
+
+.testimonial_1{
+    border-radius: 10px;
+    background-color: var(--clr-secondary-200);
+    padding: 20px;
+    box-shadow: 0 10px 20px rgb(71, 71, 71);
+    background-image: url('/images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position: 80% 0;
+    grid-column: span 2; /* this spans together 2columns*/
+   
+    
+    
+}
+
+.testimonial_head::after{
+    content: "";
+    clear: both;
+    display: table;/*shifted the whole page to be aligned on the right vertically*/
+
+}
+.testimonial_head img{
+    border-radius: 50%;
+    width: 25px;
+    float: left;
+    margin-right: 10px;
+}
+.image1{
+    border: 2px solid var(--clr-secondary-100);
+}
+
+.testimonial_head p{
+    line-height: 1.2; 
+}
+
+.testimonial_head span{
+   display: block;
+   color: var(--clr-neutral-200)
+}
+
+.special{
+    color: var(--clr-neutral-200);
+    opacity: 50%;
+}
+
+.testimonial_p{
+    color: var(--clr-primary-100);
+    margin-top: 5px;
+    font-weight: var(--fw-bold);
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+
+.testimonial_pp{
+    color: var(--clr-neutral-100);
+    opacity: 70%;
+    margin-top: 15px;
+    line-height: 1.4;
+}
+
+.testimonial_2{
+    background-color: var(--clr-secondary-300);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgb(71, 71, 71);
+}
+
+.testimonial_3{
+    background-color: var(--clr-primary-100);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgb(71, 71, 71);
+    /* max-width: 220px; */
+}
+
+#specia{
+    color: var(--clr-secondary-300);
+}
+
+#specials{
+    color: var(--clr-secondary-300);
+    opacity: 50%;
+}
+
+#testimonial_ps{
+    color: var(--clr-secondary-300);
+    margin-top: 5px;
+    font-weight: var(--fw-bold);
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+
+#testimonial_pps{
+    color: var(--clr-secondary-300);
+    opacity: 70%;
+    margin-top: 15px;
+    line-height: 1.4;
+}
+
+.testimonial_4{
+    border-radius: 10px;
+    background-color: var(--clr-secondary-300);
+    padding: 20px;
+    box-shadow: 0 10px 20px rgb(71, 71, 71);
+    grid-column: span 2;/* spans 2 columns together*/
+}
+
+.image4{
+    border: 2px solid var(--clr-secondary-200);
+}
+
+.testimonial_5{
+    background-color: var(--clr-primary-100);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgb(71, 71, 71);
+    grid-column: 4; /*starts at the 4th column.*/
+    grid-row: 1/3; /* starts at the 1st row and ends on the 3rd.can also be written as:
+    grid-row-start: 1;
+    grid-row-end: 3;*/
+}
+/* in media query, 
+max-width = the highest it should be, else apply the following changes.
+min-width = the lowest it should be for the following changes to be applied*/
+
+@media (max-width: 50em){
+    .testimonials{
+        
+    }
+    .testimonial_1{
+        grid-column: span 4;
+        grid-row-start: 1;
+    }
+
+    .testimonial_2{
+        grid-column: span 4;
+        grid-row-start: 2;
+    }
+    .testimonial_3{
+        grid-column: span 4;
+        grid-row-start: 3;
+    }
+    .testimonial_4{
+        grid-column: span 4;
+        grid-row-start: 4;
+    }
+    .testimonial_5{
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 5;
+        grid-row-end: 5;
+    }
+}
+
+
+
+
+
+
+
+
