@@ -194,7 +194,23 @@ body{
 max-width = the highest it should be, else apply the following changes.
 min-width = the lowest it should be for the following changes to be applied*/
 
-@media (max-width: 50em){
+@media (max-width: 800px){
+    .testimonials{
+        grid-template-columns: repeat(2, fr)
+    }
+    .testimonial_1{
+        grid-column: span 4;
+    }
+    .testimonial_5{
+        grid-column: span 2;
+        grid-row: 2;
+    }
+    .testimonial_4{
+        grid-column: span 4;
+    }
+}
+
+@media (max-width: 500px){
     .testimonials{
         
     }
